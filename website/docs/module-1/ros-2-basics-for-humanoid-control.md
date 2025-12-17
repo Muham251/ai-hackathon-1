@@ -1,0 +1,36 @@
+---
+id: ros-2-basics-for-humanoid-control
+title: "Module 1: The Robotic Nervous System (ROS 2)"
+sidebar_label: Introduction
+---
+
+Welcome to Module 1! This module introduces the Robot Operating System (ROS 2), the fundamental software framework that acts as the nervous system for modern robots, including humanoids. As we journey into controlling complex humanoid robots, understanding ROS 2 is the essential first step.
+
+### Target Audience
+
+This module is designed for students and developers who are new to robotics but have some programming experience, particularly in Python. If you're aiming to understand how to make a humanoid robot walk, talk, or interact with its environment, you're in the right place.
+
+### What is ROS 2?
+
+ROS 2 is a flexible framework for writing robot software. It is a set of software libraries and tools that help you build robot applications. Think of it as the middleware that handles all the complex communication between different parts of your robot's software. From low-level motor control to high-level planning and perception, ROS 2 provides the tools to manage it all.
+
+For a humanoid robot, this is crucial. A humanoid may have dozens of motors (actuators), a suite of sensors (cameras, IMUs, force sensors), and multiple computers running different software modules. ROS 2 allows these components to communicate with each other in a standardized way.
+
+![ROS 2 Architecture](https://miro.medium.com/v2/resize:fit:1400/1*3I3s22O3V1m_PS3123ul0w.png)
+
+### Learning Objectives
+
+By the end of this module, you will be able to:
+- Explain the core components of the ROS 2 architecture.
+- Create and run ROS 2 nodes, topics, and services.
+- Write a simple Python agent that communicates with a ROS 2 system.
+- Understand and write a basic URDF file for a humanoid robot model.
+
+### Module Chapters
+
+This module is divided into the following chapters:
+
+1.  **[ROS 2 Fundamentals (Nodes, Topics, Services)](nodes-topics-services-rclpy)**: A deep dive into the core communication patterns in ROS 2.
+2.  **[URDF Basics for Humanoid Models](urdf-essentials)**: An introduction to the Unified Robot Description Format (URDF) for modeling your humanoid.
+
+Let's get started!

@@ -1,55 +1,59 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- Sync Impact Report:
+Version change: 0.0.0 (initial) → 1.0.0
+List of modified principles: None (initial creation)
+Added sections: Vision, Core Principles, Success Criteria, Constraints, Stakeholders, Brand Voice
+Removed sections: None
+Templates requiring updates:
+  - .specify/templates/plan-template.md: ⚠ pending (review for alignment)
+  - .specify/templates/spec-template.md: ⚠ pending (review for alignment)
+  - .specify/templates/tasks-template.md: ⚠ pending (review for alignment)
+  - .specify/templates/commands/*.md: ⚠ pending (review for alignment)
+  - README.md: ⚠ pending (update references if any)
+  - docs/quickstart.md: ⚠ pending (update references if any)
+Follow-up TODOs: None
+-->
+# Physical AI Book Constitution
+
+## Vision
+To create an accessible and engaging guide for beginners to intermediate learners on the practical aspects of Physical AI, fostering hands-on learning.
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Hands-on Learning First
+All concepts MUST be accompanied by practical, reproducible examples and projects that readers can implement.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Clarity and Accessibility
+Content MUST be written for beginners to intermediate audiences, avoiding unnecessary jargon and explaining complex topics clearly and concisely.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Docusaurus-centric Documentation
+The book MUST leverage Docusaurus features for efficient navigation, powerful search, and an optimal documentation experience.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Community and Feedback
+The project SHOULD actively encourage community contributions and solicit feedback for continuous improvement and error correction.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+## Success Criteria
+- Positive reader feedback on clarity, usefulness, and engagement with hands-on examples.
+- High rates of successful implementation of practical projects by the target audience.
+- Stable, well-maintained, and user-friendly Docusaurus documentation site.
 
-### [PRINCIPLE_6_NAME]
+## Constraints
+- The documentation MUST be built and maintained using Docusaurus.
+- Content MUST remain accessible to the defined target audience (beginners to intermediate).
+- The focus MUST be on practical application and implementation over purely theoretical concepts.
 
+## Stakeholders
+- Authors: Responsible for content creation, technical accuracy, and adherence to the constitution.
+- Readers: Beginners to intermediate AI enthusiasts seeking practical knowledge.
+- Docusaurus Community: Providing the foundational documentation framework.
 
-[PRINCIPLE__DESCRIPTION]
-
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Brand Voice
+Educational, encouraging, practical, clear, and inspiring. The tone should be approachable and supportive, motivating readers through their learning journey.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+This Constitution supersedes all other project practices.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+**Amendment Procedure**: Any proposed amendments to this Constitution require a formal review and approval by the lead authors. Rationale for changes MUST be documented.
+**Versioning Policy**: This Constitution will adhere to semantic versioning (MAJOR.MINOR.PATCH) to reflect the significance of changes.
+**Compliance Review**: Regular reviews will be conducted to ensure ongoing alignment with the project's vision, principles, and objectives. All contributions MUST comply with the stated principles.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-06 | **Last Amended**: 2025-12-06
