@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Book Assistant</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            line-height: 1.6;
+        }
+        #chat-box {
+            border: 1px solid #ccc;
+            height: 300px;
+            overflow-y: scroll;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+        .user { color: blue; font-weight: bold; }
+        .bot { color: green; font-weight: bold; }
+        #highlight-box {
+            font-size: 0.8em;
+            color: #666;
+            background: #eee;
+            padding: 5px;
+            margin-bottom: 5px;
+            display: none;
+            border-left: 3px solid #007bff;
+        }
+        input { width: 80%; padding: 10px; }
+        button { padding: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<h2>📖 AI Book Assistant</h2>
+<p><i>Tip: Highlight any text on this page to ask a question about it!</i></p>
+
+<div id="highlight-box">
+    Selected: "<span id="selected-text-preview"></span>"
+</div>
+
+<div id="chat-box"></div>
+
+<input type="text" id="user-input" placeholder="Ask a question...">
+<button onclick="sendMessage()">Send</button>
+
+<script>
+    let currentSelection = "";
+
+    document.addEventListener("mouseup", () => {
+        const selected = window.getSelection().toString().trim();
+        if (selected.length > 5) {
+            currentSelection = selected;
+            document.getElementById("selected-text-preview").innerText = selected;
+            document.getElementById("highlight-box").style.display = "block";
+        } else {
+            currentSelection = "";
+            document.getElementById("highlight-box").style.display = "none";
+        }
+    });
+
+    async function sendMessage() {
+        const input = document.getElementById("user-input");
+        const chatBox = document.getElementById("chat-box");
+        const question = input.value;
+        if (!question) return;
+
+        chatBox.innerHTML += `<p><span class="user">You:</span> ${question}</p>`;
+        input.value = "";
+
+        const response = await fetch("/chat", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                question: question,
+                selected_text: currentSelection
+            })
+        });
+
+        const data = await response.json();
+        chatBox.innerHTML += `<p><span class="bot">AI:</span> ${data.answer}</p>`;
+        chatBox.scrollTop = chatBox.scrollHeight;
+
+        currentSelection = "";
+        document.getElementById("highlight-box").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
